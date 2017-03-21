@@ -1,0 +1,28 @@
+{
+  "name": "infojet",
+  "version": "1.0.0",
+  "description": "Find, save, and share information.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettcelestre/infojet.git"
+  },
+  "keywords": [
+    "data",
+    "facts",
+    "information",
+    "knowledge",
+    "justice",
+    "movement",
+    "resources"
+  ],
+  "author": "Brett Celestre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brettcelestre/infojet/issues"
+  },
+  "homepage": "https://github.com/brettcelestre/infojet#readme"
+}
