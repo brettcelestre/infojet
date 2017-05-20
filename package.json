@@ -1,7 +1,22 @@
 {
   "name": "infojet",
   "version": "0.1.0",
+  "author": "Brett Celestre",
+  "description": "Find, save, and share information.",
+  "homepage": "https://github.com/brettcelestre/infojet#readme",
   "private": true,
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettcelestre/infojet.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "concurrently": "^3.4.0",
@@ -18,10 +33,16 @@
     "cucumber": "^2.1.0",
     "react-scripts": "0.9.5"
   },
-  "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "bugs": {
+    "url": "https://github.com/brettcelestre/infojet/issues"
+  },
+  "keywords": [
+    "data",
+    "facts",
+    "information",
+    "knowledge",
+    "justice",
+    "movement",
+    "resources"
+  ],
 }
