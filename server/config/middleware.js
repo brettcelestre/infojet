@@ -1,6 +1,8 @@
 let morgan = require('morgan'),
     bodyParser = require('body-parser');
 
+let userRoutes = require('../user/userRoutes.js');
+
 module.exports = (app, express) => {
 
   // Logs server activity
@@ -20,22 +22,10 @@ module.exports = (app, express) => {
   // Serves index
   app.use(express.static(__dirname + '/../../src'));
 
-  // Sign Up Routes
-  let signupRouter = express.Router();
-  app.use('/signup', signupRouter);
-  require('../signup/signupRoutes.js')(signupRouter);
-
-  // Login Routes
-  // app.use('/login', loginRouter);
-
-  // Authentication Routes
-  // app.use('/auth', authRouter);
-
   // User Routes
-
-    // ~/profile
-    // ~/feed
-    // ~/follow
+  let userRouter = express.Router();
+  userRoutes(userRouter);
+  app.use('/api/user', userRouter);
 
   // Search Routes
 
