@@ -10,12 +10,12 @@ module.exports = function(app) {
     .post(userController.login);
 
   app.route('/profile')
-    .get();
+    .get(userController.profile);
 
   app.route('/feed')
-    .get();
+    .get(userController.feed);
 
   app.route('/follow')
-    .post();
+    .post(userController.follow);
 
 };
