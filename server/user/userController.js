@@ -5,8 +5,10 @@ let User = require('./userModel.js');
 module.exports = {
 
     signup: (req, res) => {
+      console.log('/signup POST req.body:', req.body);
+      req.session.currentUser = req.body
       // Sign Up Logic
-      res.send('api/user/signup - POST')
+      res.send(req.body)
     },
 
     login: (req, res) => {
