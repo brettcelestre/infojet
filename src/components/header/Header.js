@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import './Header.css';
+import { currentUser } from '../../actions/index';
+
+let count = 0;
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      username: '',
-      notifications: 0
-    };
+  componentDidMount(){
+    this.props.currentUser();
+    console.log('data?', this.props.userData);
   }
 
   render() {
+    console.log('data?', this.props.userData);
+
+    // Add 'Username' to header after Sign Up
+
     return (
       <div className="header">
 
@@ -36,10 +39,15 @@ class Header extends Component {
         <Link to="/signup">
           Sign Up
         </Link>
+
       </div>
     );
   }
 
 }
 
-export default Header;
+function mapStateToProps(state) {
+  return { userData: state.userData };
+}
+
+export default connect(mapStateToProps, { currentUser })(Header);
