@@ -8,6 +8,9 @@
 # production
 /build
 
+# Dev Notes
+NOTES.txt
+
 # misc
 .DS_Store
 .env
